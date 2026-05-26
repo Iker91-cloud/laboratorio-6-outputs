@@ -1,0 +1,24 @@
+name: Test Tag Normalizer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Ejecutar la custom action
+        id: normalizer_step
+        # Consume la acción desde otro workflow apuntando al repositorio y versión
+        uses: Iker91-cloud/tag-normalizer-action@v1.0.0
+        with:
+          raw-string: 'Release Candidatè 1.0/Test!!'
+
+      - name: Usar el Output
+        run: |
+          echo "El tag normalizado resultante es: ${{ steps.normalizer_step.outputs.normalized-tag }}"
