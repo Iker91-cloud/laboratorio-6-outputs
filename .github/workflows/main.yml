@@ -15,7 +15,7 @@ jobs:
       - name: Ejecutar la custom action
         id: normalizer_step
         # La ruta ahora apunta directamente a la raíz del repositorio
-        uses: Iker91-cloud/Laboratorios@v1.0
+        uses: Iker91-cloud/Laboratorios@v1.0.0
         with:
           raw-string: 'Release Candidatè 1.0/Test!!'
 
