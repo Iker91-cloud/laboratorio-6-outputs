@@ -14,8 +14,8 @@ jobs:
 
       - name: Ejecutar la custom action
         id: normalizer_step
-        # Obligamos a buscar el index.js en el repositorio de Laboratorios
-        uses: Iker91-cloud/Laboratorios/tag-normalizer-action@main
+        # Apunta directamente a la raíz del repositorio que me acabas de mostrar
+        uses: Iker91-cloud/laboratorio-6-outputs@main
         with:
           raw-string: 'Release Candidatè 1.0/Test!!'
 
