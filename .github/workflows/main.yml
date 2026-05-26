@@ -14,8 +14,8 @@ jobs:
 
       - name: Ejecutar la custom action
         id: normalizer_step
-        # Consume la acción desde otro workflow apuntando al repositorio y versión
-        uses: Iker91-cloud/Laboratorios/tag-normalizer-action@v1.0.0
+        # La ruta ahora apunta directamente a la raíz del repositorio
+        uses: Iker91-cloud/Laboratorios@v1.0
         with:
           raw-string: 'Release Candidatè 1.0/Test!!'
 
